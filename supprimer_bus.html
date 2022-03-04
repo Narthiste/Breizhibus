@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<h1>supprimer bus</h1>
+
+{% block contenu %}
+<form action="{{ url_for('supprimer_bus') }}" method="POST">
+
+
+    <label for="id_bus">id_bus : </label>
+    <select name="id_bus" id="id_bus">
+        {% for id in id_bus %}
+            <option value="{{ id[0] }}">{{ id[0] }}</option>
+        {% endfor %}
+    </select>
+
+    <button type = "submit"> Supprimer un bus </button>
+
+</form>
+{% endblock %}

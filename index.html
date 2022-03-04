@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>breizhibus</title>
+    
+</head>
+
+    <body>
+     <h1>bienvenue chez breizhibus</h1>
+     <h2>Accueil</h2>
+            <div></div>
+                <a href="#enbas">Aller en bas</a>
+                <p>Breizhibus</p>
+                
+            </div>
+        
+    
+            <ul>
+                <li>Breizhibus</li>
+            </ul>
+
+            <center><img src =".\static\breizh bus.jpg" width="500" height="500"></center>
+            <p id="enbas"></p>
+            <div>
+                <a href="{{url_for('client')}}"><img src=".\static\icon-suivant.gif" title="Lien client" alt="Client"></a>
+                <a href="{{url_for('formuler')}}"><img src=".\static\icon-suivant.gif" title="Lien Pro" alt="Professionel"></a>
+            </div>
+        </body>
+</html>   
+
+
+    <!-- <h2>LIGNE DE BUS</h2>
+     {% for ligne in lignes %}
+        <p>{{ligne['id_ligne']}}</p>
+     {% endfor %}
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<h1>modifier bus</h1>
+
+{% block contenu %}
+<form action="{{ url_for('modifier_bus') }}" method="POST">
+    <label for="numero">numero : </label>
+    <input type="text" maxlength="4" name="numero" required>
+
+    <label for="immatriculation">immatriculation   : </label>
+    <input type="text" maxlength="9" name="immatriculation" required>
+
+    <label for="nombre_places">nombre de places   : </label>
+    <input type="number" min="1" max="40" name="nombre_places" required>
+
+    <label for="id_lignes">ligne : </label>
+    <select name="id_lignes" id="id_lignes">
+        {% for id in id_lignes %}
+            <option value="{{ id[0] }}">{{ id[0] }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="id_bus">id_bus : </label>
+    <select name="id_bus" id="id_bus">
+        {% for id in id_bus %}
+            <option value="{{ id[0] }}">{{ id[0] }}</option>
+        {% endfor %}
+    </select>
+
+    <button type = "submit"> Modifier un bus </button>
+
+</form>
+{% endblock %}

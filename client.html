@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block contenu %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nom de la ligne</th>
+                <th>Nom de l'arrêt</th>
+                <th>Adresse de la l'arrêt</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for elt in lignes %}
+                <tr>
+                    <td>{{ elt[0] }}</td>
+                    <td>{{ elt[1] }}</td>
+                    <td>{{ elt[2] }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
